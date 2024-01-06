@@ -12,11 +12,12 @@ export const CopyButton = ({ textToCopy, ...fabProps }: ICopyButton) => {
     useEffect(() => {
         const notifySub = Clipboard.addClipboardListener(({ contentTypes }: Clipboard.ClipboardEvent) => {
             if (contentTypes.includes(Clipboard.ContentType.PLAIN_TEXT)) {
-                Clipboard.getStringAsync().then(phrase => notify.show('Frase copiada!', phrase))
+                Clipboard.getStringAsync().then(phrase => notify.showInfo('Frase copiada!', phrase))
             }
         })
         return () => Clipboard.removeClipboardListener(notifySub)
     }, [notify])
+    
     return (
         <Fab
             onPress={async () => Clipboard.setStringAsync(textToCopy)}
