@@ -17,7 +17,9 @@
       "resizeMode": "cover",
       "backgroundColor": "#00000"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -34,6 +36,16 @@
       "typedRoutes": true,
       "tsconfigPaths": true
     },
-    "plugins": ["expo-router"]
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "385b9fcf-894c-456f-a08b-74916721f707"
+      }
+    }
   }
 }
