@@ -13,7 +13,7 @@
       "barStyle": "light-content"
     },
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash_screen.png",
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
