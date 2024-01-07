@@ -4,8 +4,8 @@ import * as cheerio from "cheerio";
 import iconv from "iconv-lite";
 import { IMAGE_URL, QUOTES_URL } from "@/constants/API";
 import { TQuote } from "@/helpers/types/Quote";
+import { TApi, TExtractPhrasesFromHtml, TFetchPageHtml } from "@/helpers/types/Api";
 
-type TApi = (limit: number, offset: number, searchTerm: string) => Promise<{quotesFounded: TQuote[], hasMore: boolean}>;
 export const api: TApi = async (limit, offset, searchTerm = 'Frases curtas') => {
    const term = slugify(searchTerm, {
     replacement: "_",
@@ -32,7 +32,6 @@ const getRandomImage = async () => {
   return image;
 };
 
-type TFetchPageHtml = (searchTerm: string, page: number) => Promise<string>;
 const fetchPageHtml: TFetchPageHtml = async (searchTerm, page) => {
   return new Promise((resolve, reject) => {
     const url = `${QUOTES_URL}/${searchTerm}/${page}`;
@@ -46,10 +45,6 @@ const fetchPageHtml: TFetchPageHtml = async (searchTerm, page) => {
   });
 };
 
-type TExtractPhrasesFromHtml = (
-  htmlContent: string,
-  numberPhrases: number
-) => Promise<{ phrases: string[]; hasMorePagination: boolean }>;
 const extractPhrasesFromHtml: TExtractPhrasesFromHtml = (htmlContent, numberPhrases) => {
   return new Promise(async (resolve, reject) => {
     const phrases: string[] = [];

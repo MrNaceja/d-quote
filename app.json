@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "d-quote",
+    "name": "D-Quote",
     "slug": "d-quote",
     "scheme": "d-quote",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "androidStatusBar": {
       "translucent": true,
-      "backgroundColor": "#ffffff00",
+      "backgroundColor": "#00000000",
       "barStyle": "light-content"
     },
     "splash": {
@@ -45,7 +45,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "385b9fcf-894c-456f-a08b-74916721f707"
+        "projectId": "ed14ebea-cf28-40db-9c9d-866df2230a01"
       }
     }
   }
