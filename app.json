@@ -8,8 +8,8 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "androidStatusBar": {
-      "hidden": true,
       "translucent": true,
+      "backgroundColor": "#ffffff00",
       "barStyle": "light-content"
     },
     "splash": {

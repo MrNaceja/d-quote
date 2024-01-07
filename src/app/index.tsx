@@ -1,6 +1,6 @@
-import { FlatList } from "@gluestack-ui/themed";
 import { useCallback, useState } from "react";
 import { NativeScrollEvent, NativeSyntheticEvent } from "react-native";
+import { FlatList } from "@gluestack-ui/themed";
 
 import { SCREEN } from "@/constants/SCREEN";
 import { TQuote } from "@/helpers/types/Quote";
