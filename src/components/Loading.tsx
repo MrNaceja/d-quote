@@ -4,9 +4,7 @@ import { SlideUp } from "./animated/SlideUp"
 import { FullScreen } from "./FullScreen"
 import { ComponentProps } from "react"
 
-interface ILoadingProps extends Partial<ComponentProps<typeof Gradient>> {
-
-}
+interface ILoadingProps extends Partial<ComponentProps<typeof Gradient>> {}
 const Loading = (props : ILoadingProps) => {
     return (
         <Gradient

@@ -40,7 +40,6 @@ export default function HomeScreen() {
         <FullScreen>
             <SearchTerm value={searchTerm} onChangeText={setSearchTerm} onConfirm={handleConfirmSearchTerm} />
             <FlatList
-                contentContainerStyle={{flex: 1}}
                 ListEmptyComponent={loading ? <FullScreenLoading /> : <NoSearchTerm />}
                 onMomentumScrollEnd={handleScroll}
                 viewabilityConfig={{ itemVisiblePercentThreshold: 50 }}

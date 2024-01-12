@@ -5,7 +5,7 @@ import { config } from '@gluestack-ui/config';
 export default function LayoutStack() {
   return (
     <GluestackUIProvider config={config}>
-      <Stack screenOptions={{
+      <Stack initialRouteName="index" screenOptions={{
         headerShown: false,
         statusBarStyle: "light",
         statusBarTranslucent: true

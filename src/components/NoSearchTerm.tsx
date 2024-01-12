@@ -5,12 +5,11 @@ import { SlideUp } from "./animated/SlideUp"
 import { ScaleIn } from "./animated/SlideIn"
 import { FullScreen } from "./FullScreen"
 
+const Icon = styled(MaterialCommunityIcons, {
+    color: "$light100"
+})
+
 export const NoSearchTerm = () => {
-
-    const Icon = styled(MaterialCommunityIcons, {
-        color: "$light100"
-    })
-
     return (
         <FullScreen>
             <Gradient
